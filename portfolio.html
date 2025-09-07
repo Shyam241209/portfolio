@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio of Shyam Sundar V — Frontend Developer" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --maxw:1100px;
+      --ff: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--ff);background:linear-gradient(180deg,#071022 0%, var(--bg) 100%);color:#e6eef6}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:grid;place-items:center;font-weight:700}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.4px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .intro h2{margin:0;font-size:28px}
+    .intro p{color:var(--muted);margin:12px 0 18px}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .contact-card{display:flex;flex-direction:column;gap:10px}
+    .info-row{display:flex;align-items:center;gap:10px}
+    .info-row strong{min-width:85px;color:var(--muted);font-size:13px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041029;text-decoration:none;font-weight:700}
+
+    section{margin-top:30px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{padding:14px;border-radius:12px;background:rgba(255,255,255,0.02);transition:transform .22s ease, box-shadow .22s ease}
+    .project:hover{transform:translateY(-8px);box-shadow:0 16px 36px rgba(2,6,23,0.6)}
+    .project h3{margin:6px 0 0}
+    .muted{color:var(--muted)}
+
+    .footer{margin-top:40px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:1000px){.hero{grid-template-columns:1fr 320px}.projects-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:720px){.wrap{margin:20px;padding:16px}.hero{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}nav{display:none}}
+
+    /* subtle animations */
+    .fade-up{opacity:0;transform:translateY(12px);animation:fadeUp .6s forwards}
+    .delay-1{animation-delay:.08s}.delay-2{animation-delay:.16s}.delay-3{animation-delay:.26s}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="fade-up delay-1">
+      <div class="brand">
+        <div class="avatar">SS</div>
+        <div>
+          <h1>Shyam Sundar V</h1>
+          <p>Frontend Developer — HTML • CSS • JavaScript</p>
+        </div>
+      </div>
+      <nav class="fade-up delay-2">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card intro fade-up delay-2">
+        <h2>Hi — I'm <span style="color:var(--accent)">Shyam Sundar V</span></h2>
+        <p>I'm a frontend developer focused on building clean, responsive interfaces and delightful user experiences. I work with HTML, CSS and JavaScript to turn designs into fast, accessible web apps.</p>
+
+        <div class="skills" aria-hidden>
+          <div class="chip">HTML</div>
+          <div class="chip">CSS</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">Responsive Design</div>
+          <div class="chip">Git / GitHub</div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <a class="btn" href="#contact">Hire / Contact</a>
+          <a class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)" href="#projects">See Projects</a>
+        </div>
+      </div>
+
+      <aside class="card contact-card fade-up delay-3">
+        <div class="info-row"><strong>Name</strong><span>Shyam Sundar V</span></div>
+        <div class="info-row"><strong>Phone</strong><span>9242761272</span></div>
+        <div class="info-row"><strong>Role</strong><span class="muted">Frontend Developer</span></div>
+        <div class="info-row"><strong>Mail</strong><span class="muted">Shyamsundar24007@gmail.com</span></div>
+        <div class="info-row"><strong>Location</strong><span class="muted">Bangalore</span></div>
+        
+    </div>
+
+    <section id="projects" class="fade-up delay-2">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid" style="margin-top:12px">
+        <article class="project">
+          <div style="height:120px;background:linear-gradient(180deg,#06253a,#06323f);border-radius:10px;display:flex;align-items:center;justify-content:center">Project Image</div>
+          <h3>Project One</h3>
+          <p class="muted">A responsive landing page built with HTML/CSS and vanilla JS.</p>
+        </article>
+
+        <article class="project">
+          <div style="height:120px;background:linear-gradient(180deg,#2b0744,#0b3b45);border-radius:10px;display:flex;align-items:center;justify-content:center">Project Image</div>
+          <h3>Project Two</h3>
+          <p class="muted">Interactive image gallery with lightbox and filters.</p>
+        </article>
+
+        <article class="project">
+          <div style="height:120px;background:linear-gradient(180deg,#1b2a4a,#0c2432);border-radius:10px;display:flex;align-items:center;justify-content:center">Project Image</div>
+          <h3>Project Three</h3>
+          <p class="muted">Digital queue system demo using JS for booking slots.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="fade-up delay-3">
+      <h2>Resume</h2>
+      <div class="card" style="margin-top:12px">
+        <p class="muted">I am currently pursuing a Bachelor of Engineering (B.E.) in Computer Science at Adhiyamaan College of Engineering. I enjoy building web applications, participating in hackathons, and developing practical tools to improve campus life. I am seeking internships and projects where I can apply my skills in JavaScript, HTML/CSS, and problem-solving</p>
+        <ul style="margin-top:12px;color:var(--muted)">
+          <li>Education: BE — In progress</li>
+          <li>Skills: HTML, CSS, JS, Responsive UI</li>
+          <li>Contact: 9342761272</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-up delay-1">
+      <h2>Contact</h2>
+      <div class="card" style="margin-top:12px">
+        <form onsubmit="handleSubmit(event)" autocomplete="off">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <input name="name" placeholder="Your name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"/>
+            <input name="email" placeholder="Your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"/>
+          </div>
+          <textarea name="message" placeholder="Message" required style="width:100%;margin-top:10px;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;min-height:110px"></textarea>
+          <div style="margin-top:10px"><button class="btn" type="submit">Send message</button></div>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Shyam Sundar V</div>
+  </div>
+
+  <script>
+    // small JS helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          const el = document.querySelector(href);
+          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+        }
+      })
+    })
+
+    function handleSubmit(e){
+      e.preventDefault();
+      alert('Thanks! Message simulated — replace with your backend or mailto link.');
+      e.target.reset();
+    }
+
+    // reveal animations on load
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=> el.style.animationDelay = (i*80)+'ms');
+    })
+  </script>
+</body>
+</html>
